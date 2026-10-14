@@ -214,7 +214,11 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.025em;margi
 .addr .muted{color:var(--ink-soft);font-size:16px;margin-top:6px}
 .addr-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .map{position:relative;border-radius:32px;overflow:hidden;min-height:460px;background:#cfe3d6;border:3px solid var(--ink)}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}
+.map-ph{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:10px;text-align:center;padding:24px;color:var(--ink)}
+.map-ph svg{width:56px;height:56px}
+.map-ph b{font:800 20px/1.2 var(--display)}
+.map-ph span{font-size:15px;color:var(--ink-soft)}
 
 /* faq */
 .faq-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px)}
@@ -534,6 +538,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.025em;margi
           </div>
         </div>
         <div class="map">
+          <div class="map-ph" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 3a12 12 0 0 0-12 12c0 9 12 22 12 22s12-13 12-22A12 12 0 0 0 20 3z" fill="#E8782D" stroke="#2B2724" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="15" r="4.5" fill="#fff" stroke="#2B2724" stroke-width="2.5"/></svg><b>ul. Paproci 2, Kobyłka</b><span>Wczytuję mapę…</span></div>
           <iframe title="Mapa: ul. Paproci 2, Kobyłka" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Paproci%202%2C%2005-230%20Koby%C5%82ka&z=16&output=embed"></iframe>
         </div>
       </div>
